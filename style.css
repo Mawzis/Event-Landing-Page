@@ -1,0 +1,475 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.color{
+    background: linear-gradient(
+    90deg, white 67%, rgba(82, 1, 82, 0.829) 33%
+    );
+}
+
+
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;;
+}
+
+
+.menu{
+    flex: 1;
+    text-align: right;
+    padding-right: 40px
+}
+
+     
+.menu ul li a{
+    text-decoration: none;
+    color: rgb(48, 37, 37);
+}
+
+.menu ul{
+    float: right;
+}
+
+.menu ul li{
+    list-style: none;
+    display: inline;
+    margin: 30px;
+}
+
+.menu ul li a:hover{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.wedding{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%px;
+    column-gap: 10px;
+    padding-right: 60px;
+}
+       /* THIS IS ME TRYING TO MAKE THE PAGE RESPONSIVE FOR WEDDING CLASS*/
+@media screen and (max-width: 1000px) { 
+    .wedding{
+        grid-template-rows: auto;
+        grid-template-columns:auto;
+        min-width: 50%;
+        max-width: 50%;
+    }
+
+    .color{
+        background: none;
+    }
+
+    .wedding img{
+        margin-top: 20px;
+    }
+
+}
+
+.wedding img{
+    width: 100%;
+    height: 600px;
+}
+
+.wedpara{
+    font-size: 20px;
+    display: block;
+    padding: 100px 0px 0px 50px;
+}
+
+#read{
+    color: white;
+    background-color: rgb(65, 0, 65);
+    font-size: 20px;
+    width: 200px;
+    height: 80px;
+    border: none
+
+}
+
+#create{
+    font-size: 60px;
+    display: inline-block;
+}
+
+#memory{
+    font-size: 60px;
+    color: rgb(85, 2, 85);
+}
+
+
+/* THE SECOND SECTION FROM THE DAILY PRIME */
+
+.second{
+    padding: 60px 40px;
+}
+
+.second-inner{
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 1000px;
+    grid-column-gap: 100px;
+    padding-top: 40px;
+    margin-left: 10%;
+}
+
+
+
+
+.second-inner h1{
+    font-size: 40px;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+@media screen and (max-width: 1500px) {            
+    .second-inner{
+        grid-template-rows: auto auto;
+        grid-template-columns:auto auto;
+        min-width: 50%;
+        max-width: 50%;    
+        grid-column-gap: 50px;               
+    }
+
+    .second-inner #french{
+        width: 600px;
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {            
+    .second-inner{
+        grid-template-rows: auto;
+        grid-template-columns:auto;
+        min-width: 50%;
+        max-width: 50%; 
+        margin-top: -.1px;
+    }
+
+    .second-inner #french{
+        width: 400px;
+        font-size: 20px;
+        align-items: center;
+    }
+
+    .second-inner h1{
+        margin-left: 25%;
+    }
+}
+
+#daily{
+    color: rgb(85, 2, 85);
+}
+
+#french{
+    color: rgb(83, 2, 83);
+    font-size: 30px;
+    width: 850px;
+}
+
+
+/* STYLE FOR CLASS THIRD */
+
+.pictures{
+    --gap: 10px;
+    --num-cols: 4;
+    --row-height: 300px;  /* THE (--) ARE VARIABLE DECLARATION */ 
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-flow: var(--row-height);
+    gap: var(--gap);
+}
+
+@media screen and (max-width: 1024px) {            
+    .pictures{                                        
+        --num-cols: 2;                        
+        --row-height: 200px;                    
+    }
+}
+
+
+.pictures > img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border: 2px solid purple;
+}
+
+
+
+/* STYLE FOR PLANNINGS  */
+
+.plans{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+    color: rgb(92, 2, 92);
+}
+
+.plan{
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 45px;
+    margin-left: 60px;
+}
+
+.ideas a{
+    color: rgba(177, 83, 177, 0.89);
+    font-size: 20px;
+}
+
+#head{
+    color: rgb(100, 1, 100);
+    font-weight: bolder;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+/* STYLE FOR THE FOURTH SECTION */
+
+.reunion img{
+    width: 400px;
+    height: 500px;
+    column-gap: 0px;
+    border: 2px solid purple;
+}
+
+/* .fourth{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 1500px;
+    margin-top: 50px;
+    
+} */
+
+
+.reunion{
+    --gap: 10px;
+    --num-cols: 3;
+    --row-height: 300px;  /* THE (--) ARE VARIABLE DECLARATION */ 
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-flow: var(--row-height);
+    gap: var(--gap);
+}
+
+.reunion > img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+
+@media screen and (max-width: 1024px) {            
+    .reunion{                                        
+        --num-cols: 2;                        
+        --row-height: 200px;                    
+    }
+}
+
+@media screen and (max-width: 900px) {            
+    .reunion{                                        
+        --num-cols: 1;                        
+        --row-height: 200px;                    
+    }
+}
+
+
+.covered{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    color: rgb(65, 1, 65);
+}
+
+.covered2{
+    text-align: center;
+    color: rgba(71, 2, 71, 0.966);
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+/* STYLYNG FOR IMAGE-GRID CLASS */
+
+.image-grid{
+    --gap: 10px;
+    --num-cols: 4;
+    --row-height: 300px;  /* THE (--) ARE VARIABLE DECLARATION */ 
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-flow: var(--row-height);
+    gap: var(--gap);
+}
+
+
+.image-grid > img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+#sec{
+    grid-column: span 2;   /*TO MAKE THE #SEC OCCUPY 2 COLUMNS*/
+    
+}
+#sec{
+    grid-row: span 2;  /* TO MAKE THE #SEC OCCUPY 2 ROWS*/
+}
+
+    /*THIS IS TO MAKE THE CLASS 
+    RESPONSIVE TO THE @MEDIA STYLE. IF THE SIZE IS BELOW 1024PX,
+    THE GRID COLUMN WILL BE IN SELECTED COLUMS IN THE --NUM-COLS ATTRIBUTE IN A CASE YOU DONT 
+    WANT THE 5 PICTURES STILL DISPLAYING IN THE GRID FORMAT*/
+
+/* @media screen and (max-width: 1024px) {            
+    .image-grid{                                        
+        --num-cols: 1;                        
+        --row-height: 200px;                    
+    }
+} */
+
+
+
+#disc{
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    margin-top: 30px;
+    margin-left: 40%;
+}
+
+@media screen and (max-width: 1000px) {            
+    #disc{
+        width: 150px;
+        height: 30px;
+        font-size: 15px;
+        margin-left: 35%;
+    }
+}
+
+.touch{
+    color: purple;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+
+/*THE STYLE FOR DETAIL CLASS*/
+
+#name{
+    max-width: 300px;
+    border: 1px solid purple;
+    padding: 15px 0px 15px 5px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: rgb(175, 155, 175);
+}
+
+#mail{
+    max-width: 300px;
+    border: 1px solid purple;
+    padding: 15px 0px 15px 5px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: rgb(175, 155, 175);
+}
+
+#subject{
+    max-width: 300px;
+    border: 1px solid purple;
+    padding: 15px 0px 15px 5px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: rgb(175, 155, 175);
+}
+
+
+.details{
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 2px;
+    margin-left: 75px;
+    margin-top: 40px;
+}
+
+
+
+#message{
+    max-width: 1068px;
+    border: 1px solid purple;
+    margin-left: 70px;
+    margin-top: 30px;
+    padding: 15px 0px 150px 5px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: rgb(175, 155, 175);
+}
+
+
+#send{
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 50px;
+    margin: 15px 0px 0px 75%;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 1000px) {            
+    #send{
+        width: 150px;
+        height: 30px;
+        font-size: 15px;
+        margin-left: 75%;
+        font-weight: bolder;
+    }
+}
+
+
+
+
+
+
+
+
+
